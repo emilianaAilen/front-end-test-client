@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+
+import { SearchBox } from "./features/components/SearchBox";
+import SearchBoxWrapper from "./commons/components/SearchBoxWrapper/searchBoxWrapper";
+import ItemsResult from "./features/components/ItemsResult/itemsResult";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SearchBoxWrapper>
+      <Routes>
+        <Route path="/" element={ <SearchBox /> } />
+        <Route path="/items" element={ <ItemsResult/> } />
+        <Route path="/items/:id" element={ <div /> } />
+      </Routes>
+    </SearchBoxWrapper>
   );
 }
 
