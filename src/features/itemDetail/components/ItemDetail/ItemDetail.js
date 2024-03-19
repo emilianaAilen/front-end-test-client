@@ -2,6 +2,7 @@ import "./ItemDetail.styles.scss";
 
 import { useEffect, useState } from "react";
 
+import { BuyButton } from "../BuyButton";
 import { getItemDetail } from "../../services/itemDetail";
 import { setCategories } from "features/common/slice";
 import { useDispatch } from "react-redux";
@@ -37,6 +38,7 @@ const ItemDetail = () => {
               {price.decimals === 0 && 0}
             </p>
           </div>
+          <BuyButton />
         </div>
       </div>
       <div className="description-container">
