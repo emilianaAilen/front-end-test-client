@@ -1,16 +1,16 @@
 import { Route, Routes } from "react-router-dom";
 
-import { SearchBox } from "./features/components/SearchBox";
-import SearchBoxWrapper from "./commons/components/SearchBoxWrapper/searchBoxWrapper";
-import ItemsResult from "./features/components/ItemsResult/itemsResult";
+import { ItemDetail } from "features/itemDetail/components/ItemDetail";
+import { ItemsResult } from "features/itemsResult/components/ItemsResult";
+import { SearchBoxWrapper } from "features/common/components/SearchBoxWrapper";
 
 function App() {
   return (
     <SearchBoxWrapper>
       <Routes>
-        <Route path="/" element={ <SearchBox /> } />
-        <Route path="/items" element={ <ItemsResult/> } />
-        <Route path="/items/:id" element={ <div /> } />
+        <Route path="/" element={<></>} />
+        <Route path="/items" element={<ItemsResult />} />
+        <Route path="/items/:id" element={<ItemDetail />} />
       </Routes>
     </SearchBoxWrapper>
   );

@@ -1,9 +1,11 @@
+@import '../../styles/colors.scss';
+
 .search-box-wrapper__container {
   min-height: 100vh;
-  background-color: #EEEEEE;
+  background-color: $color__gray0;
 
   .search-box__container {
-    background-color: #FFE600; 
+    background-color: $color__yellow0; 
     height: 60px;
     display: flex;
     justify-content: center;
@@ -15,7 +17,7 @@
       border-top-right-radius: 5px;
       float: right;
       padding: 10px 15px;
-      background: #ddd;
+      background: $color__gray0;
       border: none;
       cursor: pointer;
   
@@ -32,12 +34,26 @@
     .search-box__input{
       border-bottom-left-radius: 5px;
       border-top-left-radius: 5px;
-      color: #999999;
+      color: $color__gray1;
       outline: none;
       width: 90%;
       font-size: 18px;
       padding: 10px;
       border: none;
     }
+  }
+
+  .content {
+    width: 65%;
+  }
+
+  .center-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .content-box {
+    background-color: white;
   }
 }

@@ -1,0 +1,53 @@
+@import '../../../common/styles/colors.scss';
+
+.item-container {
+  display: flex;
+  border-bottom: 1px solid $color__gray0;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 16px;
+
+  .picture {
+    padding: 16px 16px 0 0;
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .info-container {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 500px;
+  }
+
+  .price-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .shipping-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .price {
+      font-size: 24px
+  }
+
+  .title {
+      font-size: 18px;
+  }
+
+  .location {
+    padding: 32px 0 0 40px;
+    color: $color__gray2;
+    font-size: 12px;
+  }
+}
